@@ -352,10 +352,7 @@ line-height: 2.6rem;
 }
 
 /* Contact Me  */
-.contactus-form-container {
-    width: 100%;
-    /* background-color: rgb(231, 231, 231); */
-  }
+
   
   .contactus-heading {
 
@@ -379,7 +376,7 @@ line-height: 2.6rem;
   }
   
   .contactus-form-container {
-    margin-top: 25px;
+    /* margin-top: 25px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -389,7 +386,6 @@ line-height: 2.6rem;
   .form {
     display: flex;
     flex-direction: column;
-  
     gap: 30px;
     width: 70%;
     margin: 2rem 5rem;
@@ -484,6 +480,10 @@ line-height: 2.6rem;
         font-size: 2.8rem;
     }
 
+    .skill-sub-heading h4  {
+      font-size: 2.5rem;
+    }
+
     .tech-stack-heading{
         font-size: 3.8rem;
         margin-top: 5rem;
@@ -527,7 +527,15 @@ line-height: 2.6rem;
     #footer-navlinks{
         font-size: 1rem;
     }
-    
+    .footer-faded-text small{
+      display: none;
+     
+    }
+    .skills-wrapper img{
+      width: 7rem;
+      height: 7rem;
+  }
+  
 }
 
 
@@ -563,7 +571,15 @@ line-height: 2.6rem;
     #footer-navlinks{
         font-size: 1rem;
     }
+    .contactus-form-container{
+      margin-right: 20px;
+    }
+    .contactus-sub-heading {
+      font-size: 2.2rem;
+      line-height: 2.5rem;
+    }
     
+   
 }
 
 
