@@ -153,9 +153,9 @@ line-height: 2.6rem;
   }
 
   .btn-pink a {
-    /* appearance: none; */
+    appearance: none;
     color: #fff;
-    text-decoration: none;
+    /* text-decoration: none; */
   }
   
   .btn-pink {
