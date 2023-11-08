@@ -25,8 +25,11 @@
                     <li><a href="#tech-stack">About</a></li>
                     <li><a href="#projects">Project</a></li>
                     <li><a href="#contactme">Contact Me</a> </li>
-                </ul>
+                    <img src="./images/userAsset/sun.png" alt="sun" id="sun-icon">
+                  </ul>
+                
             </nav>
+            
 
             <label class="hamburger">
               <input type="checkbox" class="bars"></input>
@@ -55,6 +58,10 @@
                 href="https://www.linkedin.com/in/mohammedmusharraf"
               ></a>
               <a
+              class="fa-brands fa-twitter icon"
+              href="https://twitter.com/Musharraf_12"
+            ></a>
+              <a
               href="mailto:musharraf.personal@gmail.com"
               class="fas fa-envelope icon " 
             ></a>
@@ -64,7 +71,8 @@
                
                   <button class="btn-pink" id="btn"  download="resume">
                     <a
-                      href="https://drive.google.com/file/d/1ko5D8f2Csv6rYhoNqKmkDE21Vb6cgRCC/view?usp=sharing" target="_blank"
+                      href="https://drive.google.com/file/d/1ko5D8f2Csv6rYhoNqKmkDE21Vb6cgRCC/view?usp=sharing"
+                       target="_blank"
                       download="Musharraf'Resume"
                       >
                       Resume</a
@@ -136,7 +144,7 @@
                         </p>
                         <p class="project-info">Developed a web-based weather application that seamlessly integrated weather data from OpenWeatherMap API,
                             providing real-time and forecasted weather information to users.</p>
-                        <p class="project-info">Tech stack: HTMl, CSS, Tailwind CSS, JavaScript</p>
+                        <p class="project-info"> Tech stack: HTMl, CSS, Tailwind CSS, JavaScript</p>
                         <div class="project-links">
                             <a href="https://github.com/musharraf07/JavaScriptCourse/tree/main/Projects/10_WeatherApp">
                                 <i title="GitHubLink" class="fa-brands fa-github icon"></i><p>Github</p>
@@ -323,6 +331,10 @@
                     href="https://www.linkedin.com/in/mohammedmusharraf"
                   ></a>
                   <a
+                  class="fa-brands fa-twitter icon"
+                  href="https://twitter.com/Musharraf_12"
+                ></a>
+                  <a
                   href="mailto:musharraf.personal@gmail.com"
                   class="fas fa-envelope icon"
                 ></a>
@@ -405,6 +417,19 @@
         backSpeed: 80,
         backDelay: 1000,
       });
+
+
+
+      var sun_icon = document.getElementById("sun-icon");
+      sun_icon.onclick = function(){
+        document.body.classList.toggle("light-theme");
+        if(document.body.classList.contains("light-theme")){
+          sun_icon.src ="images/userAsset/moon.png";
+        }
+        else{
+          sun_icon.src ="images/userAsset/sun.png";
+        }
+      }
     </script>
 </body>
 </html>
