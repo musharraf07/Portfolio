@@ -353,7 +353,7 @@ line-height: 2.6rem;
     width: 350px;
     height: 567px;
     border-radius: 20px;
-    background: --product-card;
+    background: var(--product-card);
     box-shadow: 2px 2px 100px 0px rgba(0,0,0,0.20);
 }
 .project-card img{
