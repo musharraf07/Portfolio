@@ -123,8 +123,8 @@ line-height: 2.6rem;
 #sun-icon{
   width: 30px;
   cursor: pointer;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
 }
 
 .hamburger{
