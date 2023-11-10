@@ -47,7 +47,7 @@
                 <p>Hii👋,</p>
                 <p>My name is</p>
                 <p class="gradient">Mohammed Musharraf</p>
-                <p>I am a <span class="role"></span></p>
+                <p>I build things for web</p>
 
                 <div class="social-links">
                     <a
@@ -309,7 +309,7 @@
          <!-- footer -->
 
          <footer>
-            <div class="container">
+            <div class="container-footer">
               <div class="footer-wrapper">
                 
     
@@ -343,7 +343,7 @@
                 </div>
               </div>
               <div class="footer-faded-text"> 
-                 <small> Copyright &copy; 2023 Musharraf.</small> 
+                  Copyright &copy; 2023 Musharraf.
               </div>
             </div>
           </footer>
@@ -406,18 +406,22 @@
     }
       
    
-      var typeData = new Typed('.role', {
-        strings: [
-        'Coder',
-          'Web Developer',
-          'Frontend Developer',
-          
-        ],
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 80,
-        backDelay: 1000,
-      });
+    var isMobile = window.innerWidth <= 768; // You can adjust the screen width breakpoint as needed
+
+    if (!isMobile) {
+  var typeData = new Typed('.role', {
+    strings: [
+      'Programmer',
+      'Web Developer',
+      'Frontend Developer',
+    ],
+    loop: true,
+    typeSpeed: 100,
+    backSpeed: 80,
+    backDelay: 1000,
+  });
+}
+
 
 
 

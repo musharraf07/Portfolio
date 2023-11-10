@@ -572,7 +572,7 @@ line-height: 2.6rem;
     
     }
     .project-links a p{
-        color:var(--hero-heading);
+        color:var(--hero-heading-icon);
         font-size: 1.2rem;
         
     }
@@ -585,8 +585,9 @@ line-height: 2.6rem;
     #footer-navlinks{
         font-size: 1rem;
     }
-    .footer-faded-text small{
-      display: none;
+    .small{
+      /* display: none; */
+      font-size: 0.8rem;
      
     }
     .skills-wrapper img{
@@ -656,31 +657,17 @@ footer {
     align-items: center;
   }
   
-  /* .footer-faded-text {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    color: #535c87;
-    user-select: none;
-    font-size: 3em;
-  } */
-
   .footer-faded-text {
-    position: absolute;
-    left: 50%;
-    /* bottom: 50; */
+   
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--light-content); 
     text-align: center;
-    padding: 10px; 
+    /* padding: 10px;  */
   }
   
-  .footer-faded-text small {
-    font-size: 12px; /* Define the font size for the copyright text */
-    opacity: 0.7; /* Set the opacity to make it faded */
-  }
+  
   
   .link-wrapper {
     display: flex;
@@ -702,6 +689,9 @@ footer {
     display: flex;
     gap: 1.5rem;
   }
+.container-footer {
+    padding: 10px 20px 2px 5px;
+}
 
 
 
