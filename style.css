@@ -143,10 +143,14 @@ line-height: 2.6rem;
 /* hero section  */
 #hero{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     min-height: 100vh;
     align-items: center;
     gap: 3rem;
+    
+
+
+  
 
     
 }
@@ -388,7 +392,7 @@ line-height: 2.6rem;
 
 .project-links{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
 }
