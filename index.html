@@ -368,6 +368,20 @@
    
     
    <script>
+    var sun_icon = document.getElementById("sun-icon");
+
+sun_icon.onclick = function() {
+  console.log("button clicked"); 
+  document.body.classList.toggle("light-theme");
+
+  if (document.body.classList.contains("light-theme")) {
+    sun_icon.src = "images/userAsset/moon.png";
+    
+  } else {
+    sun_icon.src = "images/userAsset/sun.png";
+    
+  }
+};
         function sendEmail() {
       var name = document.getElementById("name").value;
       var email = document.getElementById("email").value;
@@ -433,20 +447,7 @@
       
       
       
-      var sun_icon = document.getElementById("sun-icon");
-
-sun_icon.onclick = function() {
-  console.log("button clicked"); 
-  document.body.classList.toggle("light-theme");
-
-  if (document.body.classList.contains("light-theme")) {
-    sun_icon.src = "images/userAsset/moon.png";
-    console.log("light-theme");
-  } else {
-    sun_icon.src = "images/userAsset/sun.png";
-    console.log("dark-theme");
-  }
-};
+      
 
 
   </script>
