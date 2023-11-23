@@ -26,6 +26,9 @@
                     <li><a href="#tech-stack">About</a></li>
                     <li><a href="#projects">Project</a></li>
                     <li><a href="#contactme">Contact</a> </li>
+                   
+                   
+
                     <img src="./images/userAsset/sun.png" alt="sun" id="sun-icon">
                   </ul>
                 
@@ -257,10 +260,6 @@
             </div>
         </section>
 
-       
-
-
-
         <!-- contact me -->
         <div id="contactme" class="contactus-form-container" data-aos="slide-up"  data-aos-duration="1000">
             <div class="container">
@@ -308,7 +307,6 @@
           
 
          <!-- footer -->
-
          <footer>
             <div class="container-footer">
               <div class="footer-wrapper">
@@ -367,38 +365,91 @@
     <script>
       AOS.init();
     </script>
-    <script>
-      function sendEmail() {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
+   
+    
+   <script>
+        function sendEmail() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+      
+      if (name.trim() === "" || email.trim() === "") {
+          alert("Name and Email are compulsory fields");
+          return; // Do not proceed further if fields are empty
+      }
+      
+      var params = {
+          name: name,
+          email: email,
+          message: message,
+      };
+      
+      const serviceID = "service_vqbr2v3";
+      const templateID = "template_8fr048j";
+      
+      emailjs.send(serviceID, templateID, params).then(
+          res => {
+              document.getElementById("name").value = "";
+              document.getElementById("email").value = "";
+              document.getElementById("message").value = "";
+              console.log(res);
+              alert("Message sent successfully");
+          }
+      );
+      }
+      
+      
+      
+      
+      (function(){
+      emailjs.init("WzWKbNMtWiCHGFp1w");
+      })();
+      
+      (function(){
+      emailjs.init("WzWKbNMtWiCHGFp1w");
+      })();
+      
+      
+      
+      
+      
+      
+      var isMobile = window.innerWidth <= 768; 
+      
+      if (!isMobile) {
+      var typeData = new Typed('.role', {
+      strings: [
+      'Programmer',
+      'Web Developer',
+      'Frontend Developer',
+      ],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+      });
+      }
+      
+      
+      
+      
+      var sun_icon = document.getElementById("sun-icon");
 
-    if (name.trim() === "" || email.trim() === "") {
-        alert("Name and Email are compulsory fields");
-        return; // Do not proceed further if fields are empty
-    }
+sun_icon.onclick = function() {
+  console.log("button clicked"); 
+  document.body.classList.toggle("light-theme");
 
-    var params = {
-        name: name,
-        email: email,
-        message: message,
-    };
+  if (document.body.classList.contains("light-theme")) {
+    sun_icon.src = "images/userAsset/moon.png";
+    console.log("light-theme");
+  } else {
+    sun_icon.src = "images/userAsset/sun.png";
+    console.log("dark-theme");
+  }
+};
 
-    const serviceID = "service_vqbr2v3";
-    const templateID = "template_8fr048j";
 
-    emailjs.send(serviceID, templateID, params).then(
-        res => {
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-            console.log(res);
-            alert("Message sent successfully");
-        }
-    );
-}
-    </script>
-    <script src="script.js"></script>
-
+  </script>
 </body>
+
 </html>
