@@ -407,7 +407,7 @@
     }
       
    
-    var isMobile = window.innerWidth <= 768; // You can adjust the screen width breakpoint as needed
+    var isMobile = window.innerWidth <= 768; 
 
     if (!isMobile) {
   var typeData = new Typed('.role', {
@@ -431,9 +431,11 @@
         document.body.classList.toggle("light-theme");
         if(document.body.classList.contains("light-theme")){
           sun_icon.src ="images/userAsset/moon.png";
+          console.log("light-theme");
         }
         else{
           sun_icon.src ="images/userAsset/sun.png";
+          console.log("dark-theme");
         }
       }
     </script>
