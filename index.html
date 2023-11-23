@@ -363,81 +363,41 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("WzWKbNMtWiCHGFp1w");
-        })();
-   
-        (function(){
-        emailjs.init("WzWKbNMtWiCHGFp1w");
-    })();
-   
-    function sendEmail() {
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var message = document.getElementById("message").value;
-
-        if (name.trim() === "" || email.trim() === "") {
-            alert("Name and Email are compulsory fields");
-            return; // Do not proceed further if fields are empty
-        }
-
-        var params = {
-            name: name,
-            email: email,
-            message: message,
-        };
-
-        const serviceID = "service_vqbr2v3";
-        const templateID = "template_8fr048j";
-
-        emailjs.send(serviceID, templateID, params).then(
-            res => {
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("message").value = "";
-                console.log(res);
-                alert("Message sent successfully");
-            }
-        );
-    }
-      
-   
-    var isMobile = window.innerWidth <= 768; 
-
-    if (!isMobile) {
-  var typeData = new Typed('.role', {
-    strings: [
-      'Programmer',
-      'Web Developer',
-      'Frontend Developer',
-    ],
-    loop: true,
-    typeSpeed: 100,
-    backSpeed: 80,
-    backDelay: 1000,
-  });
-}
-
-
-
-
-      var sun_icon = document.getElementById("sun-icon");
-      sun_icon.onclick = function(){
-        document.body.classList.toggle("light-theme");
-        if(document.body.classList.contains("light-theme")){
-          sun_icon.src ="images/userAsset/moon.png";
-          console.log("light-theme");
-        }
-        else{
-          sun_icon.src ="images/userAsset/sun.png";
-          console.log("dark-theme");
-        }
-      }
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
+    <script>
+      function sendEmail() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    if (name.trim() === "" || email.trim() === "") {
+        alert("Name and Email are compulsory fields");
+        return; // Do not proceed further if fields are empty
+    }
+
+    var params = {
+        name: name,
+        email: email,
+        message: message,
+    };
+
+    const serviceID = "service_vqbr2v3";
+    const templateID = "template_8fr048j";
+
+    emailjs.send(serviceID, templateID, params).then(
+        res => {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("Message sent successfully");
+        }
+    );
+}
+    </script>
+
 </body>
 </html>
